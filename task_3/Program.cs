@@ -14,6 +14,11 @@ Console.Clear();
 int[,] GetArray ()
 {
     int[,] matrix = new int[3,3];
+    // {
+    //     {1,2,3,},
+    //     {4,5,6,},
+    //     {7,8,9}
+    // };
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
@@ -21,15 +26,20 @@ int[,] GetArray ()
             matrix[i,j]=new Random().Next(-5,5);
         }
     }
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    return matrix;
+}
+
+int[,] PrinArray(int[,] numbers)
+{
+    for (int i = 0; i < numbers.GetLength(0); i++)
     {
-        for (int j = 0; j < matrix.GetLength(1); j++)
+        for (int j = 0; j < numbers.GetLength(1); j++)
         {
-            Console.Write(matrix[i, j] + " " + "\t");
+            Console.Write(numbers[i, j] + " " + "\t");
         }
         Console.WriteLine();
     }
-    return matrix;
+    return numbers;
 }
 
 
@@ -68,9 +78,12 @@ string printNumbers(int[,] numbers)
     return text;
 }
 
-
+void main()
+{
 int[,] numbers=GetArray ();
+PrinArray(numbers);
 string result=printNumbers(numbers);
+Console.Write("\n"+result);
+}
 
-Console.WriteLine();
-Console.Write(result);
+main();
