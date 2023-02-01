@@ -81,10 +81,10 @@ string printNumbers(int[,] numbers)
 
 void main()
 {
-int[,] numbers=GetArray ();
-PrinArray(numbers);
-string result=printNumbers(numbers);
-Console.Write("\n"+result);
+    int[,] numbers=GetArray ();
+    PrinArray(numbers);
+    string result=printNumbers(numbers);
+    Console.Write("\n"+result);
 }
 
 main();
