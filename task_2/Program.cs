@@ -32,7 +32,7 @@ void main()
     {
         float x=GetСoordinatesX(k1, b1, k2, b2);
         float y=GetСoordinatesY(x, k2, b2);
-        Console.WriteLine($"прямые пересекаются в координатах ({x};{y})");
+        ConSole.WriteLine($"прямые пересекаются в координатах ({x};{y})");
     }
 }
 
