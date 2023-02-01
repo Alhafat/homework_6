@@ -13,20 +13,20 @@ Console.Clear();
 //  };
 int[,] GetArray ()
 {
-    // int[,] matrix = new int[3,3]
-    // {
-    //     {1,2,3,},
-    //     {4,5,6,},
-    //     {7,8,9}
-    // };
-    int[,] matrix = new int[3,3];
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    int[,] matrix = new int[3,3]
     {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            matrix[i,j]=new Random().Next(-5,5);
-        }
-    }
+        {1,2,3},
+        {4,5,6},
+        {7,8,9}
+    };
+    // int[,] matrix = new int[3,3];
+    // for (int i = 0; i < matrix.GetLength(0); i++)
+    // {
+    //     for (int j = 0; j < matrix.GetLength(1); j++)
+    //     {
+    //         matrix[i,j]=new Random().Next(-5,5);
+    //     }
+    // }
     return matrix;
 }
 
@@ -51,40 +51,40 @@ string printNumbers(int[,] numbers)
     {
         for (int j = 0; j < numbers.GetLength(1)-1; j++)
         {
-            text += Convert.ToString(numbers[i, j]+" ");
+            text += Convert.ToString(numbers[i, j] + " ");
         }
     }
     for (int j = 2; j < numbers.GetLength(1); j++)
     {
         for (int i = 2; i > 0; i--)
         {
-            text += Convert.ToString(numbers[i, j]+" ");
+            text += Convert.ToString(numbers[i, j] + " ");
         }
     }
     for (int i = 0; i < numbers.GetLength(0)-2; i++)
     {
         for (int j = 2; j >0; j--)
         {
-            text += Convert.ToString(numbers[i, j]+" ");
+            text += Convert.ToString(numbers[i, j] + " ");
         }
     }
     for (int j = 0; j < numbers.GetLength(1)-2; j++)
     {
         for (int i = 0; i < numbers.GetLength(1)-1; i++)
         {
-            text += Convert.ToString(numbers[i, j]+" ");
+            text += Convert.ToString(numbers[i, j] + " ");
         }
     }
-    text += Convert.ToString(numbers[1, 1]+" ");
+    text += Convert.ToString(numbers[1, 1] + " ");
     return text;
 }
 
 void main()
 {
-    int[,] numbers=GetArray ();
+    int[,] numbers = GetArray ();
     PrinArray(numbers);
-    string result=printNumbers(numbers);
-    Console.Write("\n"+result);
+    string result = printNumbers(numbers);
+    Console.Write("\n" + result);
 }
 
 main();
