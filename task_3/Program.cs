@@ -11,19 +11,29 @@ int[,] matrix = new int[,]
     {4,5,6,},
     {7,8,9}
  };
-for (int i = 0; i < matrix.GetLength(0); i++)
-{
-    for (int j = 0; j < matrix.GetLength(1); j++)
-    {
-        // matrix[i,j]=new Random().Next(-5,5);
+// for (int i = 0; i < matrix.GetLength(0); i++)
+// {
+//     for (int j = 0; j < matrix.GetLength(1); j++)
+//     {
+//         // matrix[i,j]=new Random().Next(-5,5);
 
-    }
-}
-for (int i = 0; i < matrix.GetLength(0); i++)
+//     }
+// }
+// for (int i = 0; i < matrix.GetLength(0); i++)
+// {
+//     for (int j = 0; j < matrix.GetLength(1); j++)
+//     {
+//         Console.Write(matrix[i, j] + "\t");
+//     }
+//     Console.WriteLine();
+// }
+
+string text = "";
+for (int i = 2; i < matrix.GetLength(0); i++)
 {
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
-        Console.Write(matrix[i, j] + "\t");
+        text += Convert.ToString(matrix[i, j]) + "\n";
     }
-    Console.WriteLine();
 }
+Console.Write(text);
