@@ -5,15 +5,9 @@
 // 4 5 6 -> 7 8 9 6 3 2 1 4 5
 // 7 8 9
 
-Console.Clear();
-// {
-//     {1,2,3,},
-//     {4,5,6,},
-//     {7,8,9}
-//  };
-int[,] GetArray ()
+int[,] GetArray()
 {
-    int[,] matrix = new int[3,3]
+    int[,] matrix = new int[3, 3]
     {
         {1,2,3},
         {4,5,6},
@@ -49,7 +43,7 @@ string printNumbers(int[,] numbers)
     string text = "";
     for (int i = 2; i < numbers.GetLength(0); i++)
     {
-        for (int j = 0; j < numbers.GetLength(1)-1; j++)
+        for (int j = 0; j < numbers.GetLength(1) - 1; j++)
         {
             text += Convert.ToString(numbers[i, j] + " ");
         }
@@ -61,16 +55,16 @@ string printNumbers(int[,] numbers)
             text += Convert.ToString(numbers[i, j] + " ");
         }
     }
-    for (int i = 0; i < numbers.GetLength(0)-2; i++)
+    for (int i = 0; i < numbers.GetLength(0) - 2; i++)
     {
-        for (int j = 2; j >0; j--)
+        for (int j = 2; j > 0; j--)
         {
             text += Convert.ToString(numbers[i, j] + " ");
         }
     }
-    for (int j = 0; j < numbers.GetLength(1)-2; j++)
+    for (int j = 0; j < numbers.GetLength(1) - 2; j++)
     {
-        for (int i = 0; i < numbers.GetLength(1)-1; i++)
+        for (int i = 0; i < numbers.GetLength(1) - 1; i++)
         {
             text += Convert.ToString(numbers[i, j] + " ");
         }
@@ -81,7 +75,8 @@ string printNumbers(int[,] numbers)
 
 void main()
 {
-    int[,] numbers = GetArray ();
+    Console.Clear();
+    int[,] numbers = GetArray();
     PrinArray(numbers);
     string result = printNumbers(numbers);
     Console.Write("\n" + result);
